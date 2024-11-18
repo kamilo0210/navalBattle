@@ -1,0 +1,25 @@
+.root{
+    -fx-background-color: linear-gradient(to bottom right, #8aa2ef, #5c59c0); /* Cambia los colores según tu preferencia */
+    -fx-effect: dropshadow(three-pass-box, rgba(255,255,255,0.3), 10, 0, 0, 0); /* Agrega una sombra para simular el brillo */
+}
+#hbxHead{
+    -fx-background-color: linear-gradient(to bottom left, #8aa2ef, #525e9d);
+}
+
+#lblTitle{
+    -fx-font-family: "Cambria Math";
+    -fx-alignment: center;
+    -fx-font-size: 25;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+#paneBaseA{
+    -fx-background-color: linear-gradient(to bottom left, #8aa2ef, #5c59c0); /* Cambia los colores según tu preferencia */
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0), 10, 0, 0, 0); /* Agrega una sombra para simular el brillo */
+
+}
+#paneBaseB{
+    -fx-background-color: linear-gradient(to bottom right, #8aa2ef, #5c59c0); /* Cambia los colores según tu preferencia */
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0), 10, 0, 0, 0); /* Agrega una sombra para simular el brillo */
+
+}
