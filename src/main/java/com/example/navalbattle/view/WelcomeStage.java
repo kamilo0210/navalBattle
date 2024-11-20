@@ -29,7 +29,7 @@ public class WelcomeStage extends Stage {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/navalbattle/welcome-view.fxml"));
         VBox root = loader.load();
 
-        Image backgroundImage = new Image(getClass().getResource("/com/example/navalbattle/images/naval-battle-background.jpg").toExternalForm());
+        Image backgroundImage = new Image(getClass().getResource("/com/example/navalbattle/images/naval-battle-background.png").toExternalForm());
         BackgroundImage background = new BackgroundImage(backgroundImage,
                 BackgroundRepeat.NO_REPEAT,
                 BackgroundRepeat.NO_REPEAT,
