@@ -1,16 +1,18 @@
 package com.example.navalbattle.view;
 
+import com.example.navalbattle.controller.StartController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class StartStage extends Stage {
 
     private StartStage startStage;
+
+    private StartController StartController;
 
     /**
      * Constructor that initializes the game start window.
@@ -28,6 +30,10 @@ public class StartStage extends Stage {
         show();
     }
 
+    public StartController getStartController() {
+        return StartController;
+    }
+
     /**
      * Internal static class containing a single instance of StartStage.
      */
@@ -41,7 +47,7 @@ public class StartStage extends Stage {
      * @throws IOException if there is a problem creating the instance.
      */
     public static StartStage getInstance() throws IOException {
-        return StartStageHolder.INSTANCE=new StartStage();
+        return StartStageHolder.INSTANCE = new StartStage();
     }
 
     /**

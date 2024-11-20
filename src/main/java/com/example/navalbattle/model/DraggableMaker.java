@@ -1,7 +1,7 @@
 package com.example.navalbattle.model;
 
 import com.example.navalbattle.model.Exceptions.InvalidPositionException;
-import com.example.navalbattle.model.barcos.ShapeCreator;
+import com.example.navalbattle.model.ships.ShapeCreator;
 import javafx.scene.Node;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -14,10 +14,8 @@ import java.util.Map;
 /**
  * The {@code DraggableMaker} class allows to make draggable nodes and adjust their positions to the
  * nearest grid on the game board.
- * <p>
  *     This class handles mouse events to allow nodes to be dragged and positioned correctly on a game board.
  *     It also keeps track of the final position of the nodes.
- * </p>
  */
 public class DraggableMaker {
 
