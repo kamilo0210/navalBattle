@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="737.0" spacing="20.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.navalbattle.controller.WelcomeController">
    <children>
       <Label text="Batalla Naval" textFill="WHITE">
@@ -22,10 +21,10 @@
                   <Font name="Montserrat ExtraBold" size="24.0" />
                </font>
             </Label>
-            <TextField fx:id="nicknameField" />
+            <TextField />
          </children>
       </HBox>
-      <Button fx:id="startGameButton" mnemonicParsing="false" onAction="#handleStartGame" prefHeight="41.0" prefWidth="99.0" style="-fx-background-color: green;" text="Empezar" textFill="WHITE">
+      <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="99.0" style="-fx-background-color: green;" text="Empezar" textFill="WHITE">
          <font>
             <Font name="Montserrat SemiBold" size="12.0" />
          </font>
