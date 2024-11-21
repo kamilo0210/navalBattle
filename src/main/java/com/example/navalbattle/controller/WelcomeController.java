@@ -20,32 +20,33 @@ public class WelcomeController {
     @FXML
     private Button startGameButton;
 
+      // Dentro de WelcomeController.java
+
       @FXML
-    public void handleStartGame (ActionEvent event) throws IOException {
-        String nickname = nicknameField.getText();
-        if (nickname.isEmpty()) {
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setTitle("Warning");
-            alert.setHeaderText(null);
-            alert.setContentText("Please enter a nickname!");
-            alert.showAndWait();
-        } else {
-            // Load game progress if exists
-            Serialize serialize = new Serialize();
-            GameData gameData = serialize.loadGame(nickname);
-            if (gameData != null) {
-                // Load the game with saved data
-                System.out.println("Game loaded for " + nickname);
-                // Here, you would navigate to the game stage with the loaded data
-                StartStage.getInstance().getStartController();
-                WelcomeStage.deleteInstance();
-            } else {
-                // Start a new game
-                System.out.println("Starting new game for " + nickname);
-                // Here, you would navigate to the game stage without loaded data
-                StartStage.getInstance().getStartController();
-                WelcomeStage.deleteInstance();
-            }
-        }
-    }
+      public void handleStartGame(ActionEvent event) throws IOException {
+          String nickname = nicknameField.getText();
+          if (nickname.isEmpty()) {
+              Alert alert = new Alert(Alert.AlertType.WARNING);
+              alert.setTitle("Warning");
+              alert.setHeaderText(null);
+              alert.setContentText("Please enter a nickname!");
+              alert.showAndWait();
+          } else {
+              // Guardar el nickname al iniciar el juego
+              Serialize serialize = new Serialize();
+              serialize.saveNickname(nickname);  // Guardamos el nickname
+
+              // Cargar datos del juego si existen
+              GameData gameData = serialize.loadGame(nickname);
+              if (gameData != null) {
+                  System.out.println("Game loaded for " + nickname);
+                  StartStage.getInstance().getStartController();
+                  WelcomeStage.deleteInstance();
+              } else {
+                  System.out.println("Starting new game for " + nickname);
+                  StartStage.getInstance().getStartController();
+                  WelcomeStage.deleteInstance();
+              }
+          }
+      }
 }

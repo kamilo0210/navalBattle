@@ -220,6 +220,10 @@ public class StartController extends Stage {
         int listSize = draggableMaker.getValidPos().size();
         System.out.println("El tamaño de la lista es: " + draggableMaker.getValidPos().size());
 
+        String nickname = "NombreDelJugador";
+        Serialize serialize = new Serialize();
+        serialize.saveNickname(nickname);
+
         if (listSize != 10) {
             System.out.println("Aun faltan barcos por colocar");
             System.out.println("..." + draggableMaker.getValidPos());
