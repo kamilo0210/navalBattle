@@ -3,9 +3,6 @@
  * Provides a specific implementation to the creation of the destructors shapes
  *
  */
-
-
-
 package com.example.navalbattle.model.ships;
 
 import com.example.navalbattle.model.Exceptions.InvalidCoordinatesException;
@@ -22,19 +19,24 @@ public class DestructoresCreator extends ShapeCreator {
      * </p>
      * @throws InvalidCoordinatesException if the provided coordinates are not valid.
      */
-    public DestructoresCreator() throws InvalidCoordinatesException {
-        super(validatePoints(new double[]{
-                0, 32, // A
-                16, 0, // B
-                32, 32, // C
-                16, 32, // D
-                32, 64, // E
-                0, 64, // F
-                16, 32, // D
-                0, 32  // G
-        }), Color.rgb(228, 140, 255), Color.BLACK);
-        setHorizontalXBound(389);
-    }
+
+
+        public DestructoresCreator() throws InvalidCoordinatesException {
+            super(validatePoints(new double[] {
+                    16, 0,    // A (Punta superior central)
+                    32,32,
+                    32,64,
+                    0,64,
+                    0,32
+            }), Color.LIGHTGRAY, Color.DARKBLUE);  // Relleno gris claro, borde azul oscuro
+
+            setHorizontalXBound(32);  // Ajustar el tamaño horizontal a 1 celda de ancho (32px)
+        }
+
+
+
+
+
 
     /**
      * Checks an array of points to make sure it contains an even number of coordinates.
