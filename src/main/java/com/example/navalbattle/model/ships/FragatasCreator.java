@@ -19,11 +19,13 @@ public class FragatasCreator extends ShapeCreator {
      */
     public FragatasCreator() throws InvalidCoordinatesException {
         super(validatePoints(new double[]{
-                0, 32,//A
-                16, 0,//B
-                32, 32
-        }),Color.rgb(0, 128, 128),Color.rgb(0, 79, 79));
-        setHorizontalXBound(737);
+                16, 0,
+                32,16,
+                32,32,
+                0,32,
+                0,16
+        }), Color.LIGHTGRAY, Color.DARKBLUE);
+        setHorizontalXBound(32);
     }
     /**
      * Checks an array of points to make sure it contains an even number of coordinates.
